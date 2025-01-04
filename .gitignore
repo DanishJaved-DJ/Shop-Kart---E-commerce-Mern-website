@@ -51,8 +51,7 @@ out/
 /coverage
 
 # API keys and sensitive data
-config/
-keys.js
+
 
 # MongoDB dump files
 *.json
