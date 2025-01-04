@@ -11,6 +11,9 @@ import CategoryProduct from '../components/CatagoryProduct.jsx'
 import ProductDetails from '../pages/ProductDetails.jsx'
 import Cart from '../pages/Cart.jsx'
 import SearchProduct from '../pages/SearchProduct.jsx'
+import Success from '../pages/Success.jsx'
+import Cancel from '../pages/Cancel.jsx'
+import OrderPage from '../pages/OrderPage.jsx'
 
 const router = createBrowserRouter([
     {
@@ -49,6 +52,18 @@ const router = createBrowserRouter([
                 path : "search",
                 element : <SearchProduct/>
             },
+            {  
+                 path : "success",
+                 element : <Success/>
+            },
+            {  
+                path : "cancel",
+                element : <Cancel/>
+           },
+           {  
+            path : "order",
+            element : <OrderPage/>
+       },
             {
                 path : "admin-panel",
                 element : <AdminPanel/>,

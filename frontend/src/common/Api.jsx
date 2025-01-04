@@ -78,6 +78,10 @@ searchProduct : {
 filterProduct : {
     url : `${backendDomain}/api/filter-product`,
        method : "POST"
+},
+Payment : {
+     url : `${backendDomain}/api/checkout`,
+       method : "POST"
 }
 
 }

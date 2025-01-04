@@ -4,6 +4,7 @@ import Context from '../context/Context.jsx'
 import displayINRCurrency from '../helpers/displayCurrency.jsx'
 import { MdDelete } from "react-icons/md";
 import { toast } from 'react-toastify';
+import { loadStripe } from '@stripe/stripe-js';
 
 const Cart = () => {
     const [data,setData] = useState([])
@@ -115,6 +116,30 @@ const Cart = () => {
         }
     }
 
+    const handlePayment = async ()=>{
+        const stripePromise =await loadStripe('pk_test_51QdBKAH2MBJzYZeabEg4y4QGxkRx4FYqrpe5SExQwUxPKmNXsR4GseJMiDjOIJC6mmJclVPQNgQ06JECO82Bajc900lDF7kwXn');
+     const response = await fetch(Api.Payment.url,{
+        method : Api.Payment.method || "POST",
+        credentials : 'include',
+        headers : {
+            'content-type': 'application/json'
+        },
+        body : JSON.stringify({
+            cardItems : data
+        })
+     })
+           
+     const responseData = await response.json();
+       console.log(responseData);
+       
+     if(responseData?.id){
+        stripePromise.redirectToCheckout({
+            sessionId : responseData.id
+        })
+     }
+
+    }
+
     const totalQty = data.reduce((previousValue,currentValue)=> previousValue + currentValue.quantity,0)
     const totalPrice = data.reduce((preve,curr)=> preve + (curr.quantity * curr?.productId?.sellingPrice) ,0)
   return (
@@ -174,31 +199,38 @@ const Cart = () => {
 
 
                 {/***summary  */}
-                <div className='mt-5 lg:mt-0 w-full max-w-sm'>
-                        {
-                            loading ? (
-                            <div className='h-36 bg-slate-200 border border-slate-300 animate-pulse'>
-                                
-                            </div>
-                            ) : (
-                                <div className='h-36 bg-white'>
-                                    <h2 className='text-white bg-red-600 px-4 py-1'>Summary</h2>
-                                    <div className='flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600'>
-                                        <p>Quantity</p>
-                                        <p>{totalQty}</p>
-                                    </div>
-
-                                    <div className='flex items-center  justify-between px-4 gap-2 font-medium text-lg text-slate-600'>
-                                        <p>Total Price</p>
-                                        <p>{displayINRCurrency(totalPrice)}</p>    
-                                    </div>
-
-                                    <button className='bg-green-600  hover:bg-green-700 p-3 text-white w-full mt-2'>Payment</button>
-
+               {
+                data[0] &&
+                (
+                    <div className='mt-5 lg:mt-0 w-full max-w-sm'>
+                    {
+                        loading ? (
+                        <div className='h-36 bg-slate-200 border border-slate-300 animate-pulse'>
+                            
+                        </div>
+                        ) : (
+                            <div className='h-36 bg-white'>
+                                <h2 className='text-white bg-red-600 px-4 py-1'>Summary</h2>
+                                <div className='flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600'>
+                                    <p>Quantity</p>
+                                    <p>{totalQty}</p>
                                 </div>
-                            )
-                        }
-                </div>
+
+                                <div className='flex items-center  justify-between px-4 gap-2 font-medium text-lg text-slate-600'>
+                                    <p>Total Price</p>
+                                    <p>{displayINRCurrency(totalPrice)}</p>    
+                                </div>
+
+                                <button className='bg-green-600  hover:bg-green-700 p-3 text-white w-full mt-2'
+                                 onClick={handlePayment}
+                                >Payment</button>
+
+                            </div>
+                        )
+                    }
+            </div>
+                )
+               }
         </div>
     </div>
   )

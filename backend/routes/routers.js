@@ -21,6 +21,7 @@ import updateAddToCartProductController from '../controllers/user/updateAddToCar
 import deleteAddToCartProductController from '../controllers/user/deleteAddToCartProduct.js';
 import searchProductController from '../controllers/product/searchProduct.js';
 import filterProductController from '../controllers/product/filterProduct.js';
+import paymentController from '../controllers/order/payment.controller.js';
 
 
 
@@ -51,6 +52,9 @@ router.post("/update-cart-product",authToken,updateAddToCartProductController);
 router.post("/update-cart-product",authToken,updateAddToCartProductController);
 router.post("/delete-cart-product",authToken,deleteAddToCartProductController);
 
+
+//payment
+router.post("/checkout",authToken,paymentController);
 
 
 export default router;
