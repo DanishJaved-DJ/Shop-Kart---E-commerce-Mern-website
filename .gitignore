@@ -15,11 +15,6 @@ node_modules/
 .env.test
 .env.production
 
-# Build and output directories
-/build
-/dist
-/public/build
-/public/dist
 
 # Temporary files
 *.tmp
