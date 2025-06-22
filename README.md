@@ -48,29 +48,6 @@ SHOP KART is designed to deliver a seamless shopping experience for users and pr
 |-------------|-----------|-----------------|
 | ![Admin](https://github.com/user-attachments/assets/dcb729ff-dc0b-4599-ac0b-d3fdc72de36a) | ![Users](https://github.com/user-attachments/assets/4162d6ae-4b92-4737-8030-c614a5b1d715) | ![Products](https://github.com/user-attachments/assets/2b848d54-9b97-476d-a93d-54c1e0b24acc) |
 
-
-## 📁 Project Structure
-e-commerce/
-├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   ├── server.js
-│   └── .env
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── redux/
-│   │   ├── App.js
-│   │   └── index.js
-│   └── tailwind.config.js
-├── package.json
-├── README.md
-└── .gitignore
-```
+| Filter Products | Stripe Payment | All Orders |
+|-----------------|---------------|------------|
+| ![Filter](https://github.com/user-attachments/assets/8e5a1b2c-3f7e-4d2a-9e1e-2c4b1e7e8f12) | ![Stripe](https://github.com/user-attachments/assets/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d) | ![Orders](https://github.com/user-attachments/assets/7f8e9d0c-1b2a-3c4d-5e6f-7a8b9c0d1e2f) |
