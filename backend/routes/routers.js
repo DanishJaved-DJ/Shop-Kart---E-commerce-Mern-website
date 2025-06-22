@@ -22,6 +22,7 @@ import deleteAddToCartProductController from '../controllers/user/deleteAddToCar
 import searchProductController from '../controllers/product/searchProduct.js';
 import filterProductController from '../controllers/product/filterProduct.js';
 import paymentController from '../controllers/order/payment.controller.js';
+import webHookController from '../controllers/order/webHook.controller.js';
 
 
 
@@ -55,6 +56,7 @@ router.post("/delete-cart-product",authToken,deleteAddToCartProductController);
 
 //payment
 router.post("/checkout",authToken,paymentController);
+router.post("/webhook",webHookController);
 
 
 export default router;

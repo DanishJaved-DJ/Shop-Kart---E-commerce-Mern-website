@@ -22,6 +22,9 @@ const paymentController = async (req,res)=>{
                 }
              ],
              customer_email : user.email,
+             metadata : {
+                 userId : req.userId
+             },
              line_items : cardItems.map((item,idx)=>{
                 return {
                     price_data : {

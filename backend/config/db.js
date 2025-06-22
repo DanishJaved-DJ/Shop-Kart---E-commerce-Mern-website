@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const mongoose_URL="mongodb://localhost:27017" || porcess.env.MONGO_URI ; 
+const mongoose_URL= process.env.MONGOOSE_URL; 
 
 const dataBaseConnect=async ()=>{
    await mongoose
