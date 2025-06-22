@@ -53,10 +53,6 @@ out/
 # API keys and sensitive data
 
 
-# MongoDB dump files
-*.json
-*.bson
-
 # MacOS system files
 .DS_Store
 
