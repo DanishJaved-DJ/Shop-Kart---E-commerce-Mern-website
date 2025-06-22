@@ -48,6 +48,6 @@ SHOP KART is designed to deliver a seamless shopping experience for users and pr
 |-------------|-----------|-----------------|
 | ![Admin](https://github.com/user-attachments/assets/dcb729ff-dc0b-4599-ac0b-d3fdc72de36a) | ![Users](https://github.com/user-attachments/assets/4162d6ae-4b92-4737-8030-c614a5b1d715) | ![Products](https://github.com/user-attachments/assets/2b848d54-9b97-476d-a93d-54c1e0b24acc) |
 
-| Filter Products | Stripe Payment | All Orders |
-|-----------------|---------------|------------|
-| ![Filter](https://github.com/user-attachments/assets/8e5a1b2c-3f7e-4d2a-9e1e-2c4b1e7e8f12) | ![Stripe](https://github.com/user-attachments/assets/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d) | ![Orders](https://github.com/user-attachments/assets/7f8e9d0c-1b2a-3c4d-5e6f-7a8b9c0d1e2f) |
+| Filter Products | Stripe Payment | Search |
+|-----------------|---------------|--------|
+| ![Filter](https://github.com/user-attachments/assets/b8aa0658-edfe-41de-a695-3d711f83f6a9) | ![Stripe](https://github.com/user-attachments/assets/d9a4a4b0-4363-4e87-9e62-b54543e4156c) | ![Orders](https://github.com/user-attachments/assets/6d4d66d1-baca-44ad-8cf1-fe5d02345b3f) |
