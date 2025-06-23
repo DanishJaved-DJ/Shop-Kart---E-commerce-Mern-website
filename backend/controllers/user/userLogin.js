@@ -1,6 +1,8 @@
 import bcrypt from 'bcrypt';
 import userModel from '../../models/user.model.js';
 import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const  userLogInInController = async(req,res)=>{
     try{
