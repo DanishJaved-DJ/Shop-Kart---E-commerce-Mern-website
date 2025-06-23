@@ -5,7 +5,7 @@ const userLogout = async (req, res) => {
               path : '/',
             httpOnly: true,
             secure: true,
-            // sameSite: 'strict',
+            sameSite: 'none',
        });
 
         // Send a success response
