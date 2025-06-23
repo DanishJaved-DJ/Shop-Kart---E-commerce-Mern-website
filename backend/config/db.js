@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 
-const mongoose_URL= process.env.MONGOOSE_URL; 
+const mongoose_URL= process.env.mongoose_URL || 'mongodb+srv://danishjaved3191:4i0EVZizUXo0VqJe@cluster0.fynthx4.mongodb.net/'; 
 
 const dataBaseConnect=async ()=>{
    await mongoose
